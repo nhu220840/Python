@@ -4,7 +4,7 @@ while True:
         print(num, "is not 3-digit positive integer")
         num = int(input("Please type a 3-digit positive integer again: "))
     else:
-        f = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "night"]
+        f = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
         s = [
             "ten",
             "eleven",
@@ -36,7 +36,7 @@ while True:
 
         speech = f[firstNum] + " hundered "
         if secondNum == 1:
-            speech += s[thirdNum]
+            speech += "and " + s[thirdNum]
         else:
             speech = speech + t[secondNum] + " " + f[thirdNum]
         print("English word representation for", num, "is:", speech)
