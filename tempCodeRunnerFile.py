@@ -1,0 +1,7 @@
+print(my_list[:-2:2]) 
+# print(my_list[:-6: -2]) 
+# print(my_list[2::3]) 
+# print(my_list[7::-3]) 
+# print(my_list[::3]) 
+# print(my_list[-1::-2]) 
+# print(my_list[:]) 

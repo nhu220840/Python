@@ -1,0 +1,7 @@
+s = input("Please enter a string: ")
+print("1. The length of a string is:", len(s))
+print("2. The uppercase of a string is:", s.upper())
+print("3. The lowercase of a string is:", s.lower())
+print("4. The 2nd character of the string is:", s[1])
+print('5. A string after inserted "IN" between the first character and the second character is:', s[:1] + "IN" + s[1:])
+print('6. Letter "s" is in the string' if 's' in s else '6. Letter "s" is not in the string')
