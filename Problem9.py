@@ -35,7 +35,7 @@ while True:
         thirdNum = num % 10
 
         speech = f[firstNum] + " hundered "
-        if secondNum == 0 and num % 100 != 0:
+        if secondNum == 0 and thirdNum != 0:
             speech += "and " + f[thirdNum]
         elif secondNum == 1:
             speech += "and " + s[thirdNum]

@@ -1,21 +1,31 @@
-Number = ('One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Forteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen', 'Twenty');
-Tens = ('Ten', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety')
-Hang_Tram = 0
-Hang_Chuc = 0
-Hang_Don_Vi = 0
-
+print('Nguyễn Thị Quỳnh Anh')
+number = ['', 'One', 'Two',  'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten']
+nty = ['', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety']
+tens = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Forteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen']
 x = int(input('Please type a 3-digit positive integer: x = '))
-if (x > 999) or (x < 100):
-  print (x,' is not a 3-digit number.')
+n=x
+if n > 999 or n < 100:
+  print (n,' is not a 3-digit number.')
 else:
-  Hang_Tram = int((x - x%100)/100);
-  Hang_Chuc = int(((x - Hang_Tram*100) - (x - Hang_Tram*100)%10)/10);
-  Hang_Don_Vi = int((x - Hang_Tram*100)%10);
-  print('Hang_Tram = ', Hang_Tram);
-  print('Hang_Chuc = ', Hang_Chuc);
-  print('Hang_Don_Vi = ', Hang_Don_Vi);
-  if Hang_Chuc*10 >= 20:
-    Word_Number = Number[Hang_Tram-1] + ' Hundred and ' + Tens[Hang_Chuc-1] + ' ' + Number[Hang_Don_Vi-1];
+  d = [0,0,0]
+  i=0
+  while n>0:
+    d[i]=n%10
+    i+=1
+    n=n//10
+    print ('d = ',d)
+    print ('i = ', i)
+    print ('x = ', n)
+  num = ''
+  if d[2]!=0:
+    num+=number[d[2]]+' hundred '
+  if d[1]!=0:
+    if (d[1]==1):
+      num+=tens[d[0]]
+    if (d[1]!=1):
+      num+=nty[d[1]-1]+' '+ number[d[0]]
+    else:
+      num+=''
   else:
-    Word_Number = Number[Hang_Tram-1] + ' Hundred and ' + Number[Hang_Chuc*10+Hang_Don_Vi-1];
-  print('English word representation for ', x, ' is: ', Word_Number)
+    num+=' and '+number[d[0]]
+print (x,' is ', num)
