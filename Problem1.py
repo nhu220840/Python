@@ -4,7 +4,7 @@ for i in range (A, 0, -1):
     print(i, end = '')
     if(i != 1): print(',', end = '')
 
-print('\n')
+print()
 
 print("While loop:", end = ' ')
 while A != 0:
