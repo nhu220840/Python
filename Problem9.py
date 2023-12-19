@@ -34,12 +34,12 @@ while True:
         secondNum = num % 100 // 10
         thirdNum = num % 10
 
-        speech = f[firstNum] + " hundered "
+        result = f[firstNum] + " hundered "
         if secondNum == 0 and thirdNum != 0:
-            speech += "and " + f[thirdNum]
+            result += "and " + f[thirdNum]
         elif secondNum == 1:
-            speech += "and " + s[thirdNum]
+            result += "and " + s[thirdNum]
         else:
-            speech = speech + t[secondNum] + " " + f[thirdNum]
-        print("English word representation for", num, "is:", speech)
+            result = result + t[secondNum] + " " + f[thirdNum]
+        print("English word representation for", num, "is:", result)
         break
