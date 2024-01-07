@@ -6,4 +6,4 @@
 # print(my_list[-1::-2]) 
 # print(my_list[:]) 
 b = input()
-print(b[len(b)::-1])
+print(b[None:None:-1])
