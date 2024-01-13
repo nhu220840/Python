@@ -1,4 +1,7 @@
-list1 = ["a", "b", ["c", ["d", "e", ["f", "g"], "k"], "l"], "m", "n"]
-sub_list = ["h", "i", "j"]
-list1[2][1][2].extend(sub_list)
-print(list1)
+a = 5
+if a == 0:
+    print("A is zero.")
+elif a % 3 == 0:
+    print("3 divides A.")
+else:
+    print("A is not divisible by 3.")
