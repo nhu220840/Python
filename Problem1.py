@@ -2,7 +2,7 @@ A = int(input("Please enter a positive integer: "))
 print("For loop:", end = ' ')
 for i in range (A, 0, -1): #A=5
     print(i, end = '')
-    if(i != 1): print(',', end = '')
+    if(i != 1): print(',', end = '') 
 
 print()
 
