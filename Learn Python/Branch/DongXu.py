@@ -1,5 +1,5 @@
-import math
+from math import *
 
 numberOfCoins, sum = map(int, input().split())
 
-print(math.ceil(sum / numberOfCoins))
+print(ceil(sum / numberOfCoins))
