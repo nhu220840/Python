@@ -1,3 +1,6 @@
+import sys
+
+
 class Student:
     def __init__(self, i=None, n=None, b=None):
         self.i = i
@@ -99,7 +102,7 @@ if __name__ == "__main__":
     stlst = []
     cslst = []
 
-    input = sys.stdin.read if not sys.stdin.isatty() else input
+    # input = sys.stdin.read if not sys.stdin.isatty() else input
     
     while True:
         opt = int(
