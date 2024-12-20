@@ -36,7 +36,7 @@ class Course:
 Course name: {self.n}
 Course mark:"""
         for k, v in self.m.items():
-            res += f"\t Student {st.n}[{st.i}] mark: {v}\n"
+            res += f"\t Student [{k}] mark: {v}\n"
         return res
     
 
@@ -60,12 +60,12 @@ def cst_inpf(cslst):
         print("----------------------")
         stlst.append(cs)
 
-def mrk_inpf(cslst, stdlst):
+def mrk_inpf(cslst, stlst):
     print("----------------------")
-    csid - input("Select the couse by courst ID: ")
+    csid = input("Select the couse by courst ID: ")
     cs = [cs for cs in cslst if cs[0] == csid][0]
     print("Please insert student marks: ")
-    for st in stlist:
+    for st in stlst:
         print("+++")
         mrk = input(f"Student {st.n}[{st.i}] mark: ")
         cs[2][st.i] = mrk

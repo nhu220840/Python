@@ -25,12 +25,12 @@ def cst_inpf(cslst):
         print("----------------------")
         stlst.append([i, n, {}])
 
-def mrk_inpf(cslst, stdlst):
+def mrk_inpf(cslst, stlst):
     print("----------------------")
-    csid - input("Select the couse by courst ID: ")
+    csid = input("Select the couse by courst ID: ")
     cs = [cs for cs in cslst if cs[0] == csid][0]
     print("Please insert student marks: ")
-    for st in stlist:
+    for st in stlst:
         print("+++")
         mrk = input(f"Student {st[1]}[{st[0]}] mark: ")
         cs[2][st[0]] = mrk
