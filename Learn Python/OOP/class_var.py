@@ -8,7 +8,7 @@ class Student:
         Student.num_students += 1
 
 student1 = Student("Nhu", 20)
-student2 = Student("Vezyl", 19)
+student2 = Student("Tom", 19)
 student3 = Student("Sherry", 33)
 student4 = Student("Khoa", 18)
 

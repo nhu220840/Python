@@ -18,7 +18,7 @@ class Employee:
         return position in valid_position
     
 employee1 = Employee("Nhu", "Manager")
-employee2 = Employee("Vezyl", "Cashier")
+employee2 = Employee("Tom", "Cashier")
 employee3 = Employee("Cun", "Cook")
     
 print(Employee.is_valid_position("Cook"))

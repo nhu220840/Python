@@ -1,4 +1,5 @@
-# Duck typing
+# Duck typing: gan giong nhu overloading, dai khai la neu 1 class co 1 ham trung ten voi nhung class khac thi class y co the 
+# duoc coi nhu nhung ham kia (y la o day class Car co the duoc coi nhu Animal)
 
 class Animal:
     alive = True

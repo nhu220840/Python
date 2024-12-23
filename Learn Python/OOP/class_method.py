@@ -28,7 +28,7 @@ class Student:
 
 
 student1 = Student("Nhu", 3.2)
-student2 = Student("Vezyl", 2.0)
+student2 = Student("Tom", 2.0)
 student3 = Student("Cun", 3.0)
 
 print(Student.get_count())
