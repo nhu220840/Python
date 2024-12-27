@@ -1,4 +1,5 @@
 # PyQt5 labels
+# setStyleSheet(): thêm các thuộc tính như CSS
 
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
@@ -14,11 +15,11 @@ class MainWindow(QMainWindow):
         label.setFont(QFont("Arial", 40))
         label.setGeometry(0, 0, 700, 200)
         # using CSS styles
-        label.setStyleSheet("color: #292929;"
-                            "background-color: #6fdcf7;"
-                            "font-weight: bold;"
-                            "font-style: italic;"
-                            "text-decoration: underline;")
+        label.setStyleSheet("""color: #292929;
+                            background-color: #6fdcf7;
+                            font-weight: bold;
+                            font-style: italic;
+                            text-decoration: underline;""")
         
 
         label.setAlignment(Qt.AlignTop) # VERTICALLY TOP

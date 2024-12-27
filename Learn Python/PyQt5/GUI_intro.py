@@ -1,5 +1,7 @@
 # PyQt5 introduction
 # GUI = Graphical User Interface
+# setGeometry(): set giao diện hiển thị trên màn hình liên quan đến
+#                x, y, weight, height
 
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
