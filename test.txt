@@ -1,7 +1,8 @@
-The language's core philosophy is summarized in the document The Zen of Python.
+Language's core philosophy is summarized in the document The Zen of Python.
 Beautiful is better than ugly.
 Explicit is better than implicit.
 Simple is better than complex.
 Complex is better than complicated.
-Readability counts. 
+Readability counts.
 That's all
+Hello

@@ -1,0 +1,4 @@
+CaO: Calcium Oxide
+SiO₂: Silicon Dioxide
+P₂O: Diphosphorus Monoxide
+PbO: Lead(II) Oxide

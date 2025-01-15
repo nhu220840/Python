@@ -1,13 +1,12 @@
 import sys
 
-
 class Student:
     def __init__(self, i=None, n=None, b=None):
         self.i = i
         self.n = n
         self.b = b
 
-    def inpf(self):
+    def input(self):
         self.i = input("Student id: ")
         self.n = input("Student name: ")
         self.b = input("Student DoB: ")
@@ -22,7 +21,7 @@ class Course:
         self.n = n
         self.m = {}  # Marks dictionary for students
 
-    def inpf(self):
+    def input(self):
         self.i = input("Course id: ")
         self.n = input("Course name: ")
 
@@ -33,79 +32,80 @@ class Course:
         return res
 
 
-def std_inpf(stlst):
+def student_input(std_list):
     print("----------------------")
     nb = int(input("Number of students: "))
     for idx in range(nb):
         print(f"Student number {idx + 1}:")
         st = Student()
-        st.inpf()
+        st.input()
         print("----------------------")
-        stlst.append(st)
+        std_list.append(st)
 
 
-def cst_inpf(cslst):
+def courses_input(cs_list):
     print("----------------------")
     nb = int(input("Number of courses: "))
     for idx in range(nb):
         print(f"Course number {idx + 1}:")
         cs = Course()
-        cs.inpf()
+        cs.input()
         print("----------------------")
-        cslst.append(cs)
+        cs_list.append(cs)
 
 
-def mrk_inpf(cslst, stlst):
+def mark_input(cs_list, std_list):
     print("----------------------")
     csid = input("Select the course by Course ID: ")
-    cs = next((cs for cs in cslst if cs.i == csid), None)
+    cs = next((cs for cs in cs_list if cs[0] == csid), None)
+    # cs = [cs for cs in cs_list if cs[0] == csid][0]
     if not cs:
         print("Course not found.")
         return
 
     print("Please insert student marks:")
-    for st in stlst:
+    for st in std_list:
         print("+++")
         mrk = input(f"Student {st.n} [{st.i}] mark: ")
         cs.m[st.i] = mrk
     print("----------------------")
 
 
-def std_lstf(stlst):
+def student_list(std_list):
     print("----------------------")
-    print(f"There are {len(stlst)} students in the system:")
-    for st in stlst:
+    print(f"There are {len(std_list)} students in the system:")
+    for st in std_list:
         print("+++")
         print(st)
     print("----------------------")
 
 
-def cs_lstf(cslst):
+def courses_list(cs_list):
     print("----------------------")
-    print(f"There are {len(cslst)} courses in the system:")
-    for cs in cslst:
+    print(f"There are {len(cs_list)} courses in the system:")
+    for cs in cs_list:
         print("+++")
         print(cs)
     print("----------------------")
 
 
-def mark_lstf(cslst):
+def mark_list(cs_list):
     print("----------------------")
     print("Marks information for all courses:")
-    for cs in cslst:
+    for cs in cs_list:
         print("+++")
         print(cs)
     print("----------------------")
 
 
 if __name__ == "__main__":
-    stlst = []
-    cslst = []
+    std_list = []
+    cs_list = []
 
     # input = sys.stdin.read if not sys.stdin.isatty() else input
     
     while True:
-        opt = int(
+        option = int(
             input(
                 """
 [Student Mark Management System]
@@ -120,19 +120,19 @@ Option: """
             )
         )
 
-        if opt == 1:
-            std_inpf(stlst)
-        elif opt == 2:
-            cst_inpf(cslst)
-        elif opt == 3:
-            std_lstf(stlst)
-        elif opt == 4:
-            cs_lstf(cslst)
-        elif opt == 5:
-            mrk_inpf(cslst, stlst)
-        elif opt == 6:
-            mark_lstf(cslst)
-        elif opt == 7:
+        if option == 1:
+            student_input(std_list)
+        elif option == 2:
+            courses_input(cs_list)
+        elif option == 3:
+            student_list(std_list)
+        elif option == 4:
+            courses_list(cs_list)
+        elif option == 5:
+            mark_input(cs_list, std_list)
+        elif option == 6:
+            mark_list(cs_list)
+        elif option == 7:
             break
         else:
             print("Invalid option.")
