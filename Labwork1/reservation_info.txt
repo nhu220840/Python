@@ -1,0 +1,4 @@
+Guest: Angela Merkel
+Paid: False
+Room: S502
+Months: 12
