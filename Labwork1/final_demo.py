@@ -28,9 +28,10 @@ class PlayerCharacter(Character):
 test = Character("Stone Giant", 1, 780)
 
 #Test case
-test2 = PlayerCharacter("Gandalf", 99, 1000, "Staff of Power")
-print(test2)
-test2.save("./Labwork1/player_info.txt")
+# test2 = PlayerCharacter("Gandalf", 99, 1000, "Staff of Power")
+# print(test2)
+# test2.save("./Labwork1/player_info.txt")
+
 test2.save_in_background("./Labwork1/player.txt")
 
 
