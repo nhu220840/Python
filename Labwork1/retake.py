@@ -1,4 +1,5 @@
 import os
+import subprocess
 
 class Reservation:
     def __init__(self, guest, paid, room):
@@ -28,8 +29,8 @@ class LongReservation(Reservation):
         self.save(filename)
 
         os.system(f"zip 'output.zip' {filename}")
+        # subprocess.run(f"zip output.zip {filename}", shell=True)
 
-    
 customer = Reservation("Emmanuel Macron", True, "R408")
 
 #Test case

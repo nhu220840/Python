@@ -24,6 +24,7 @@ class PlayerCharacter(Character):
     def save_in_background(self, filename):
         t = threading.Thread(target=self.save, args=(filename,))
         t.start()
+        # t.join()
 
 test = Character("Stone Giant", 1, 780)
 
