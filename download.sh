@@ -16,7 +16,7 @@
 
 # Update the system
 echo "Updating packages..."
-sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get update 
 
 # Install GParted
 echo "Installing GParted..."

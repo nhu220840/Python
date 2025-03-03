@@ -1,0 +1,14 @@
+Tank infor:
+HitPoint: 7, Damage: 7, Armor: 7, Price: 40, Strength: 12.12435565298214
+2
+Tank infor:
+HitPoint: 10, Damage: 2, Armor: 5, Price: 30, Strength: 11.357816691600547
+1
+Tank infor:
+HitPoint: 5, Damage: 10, Armor: 0, Price: 25, Strength: 11.180339887498949
+4
+Tank infor:
+HitPoint: 5, Damage: 5, Armor: 1, Price: 10, Strength: 7.14142842854285
+3
+[3, 4, 1]
+[2, 1]
