@@ -4,8 +4,8 @@ import pandas as pd
 def forward_difference(x_values, f_values):
     derivatives = []
     for i in range(len(x_values) - 1):
-        h = x_values[i+1] - x_values[i]
-        deriv = (f_values[i+1] - f_values[i]) / h
+        h = x_values[i + 1] - x_values[i]
+        deriv = (f_values[i + 1] - f_values[i]) / h
         derivatives.append(deriv)
     
     derivatives.append(None)
@@ -14,8 +14,8 @@ def forward_difference(x_values, f_values):
 def backward_difference(x_values, f_values):
     derivatives = [None]
     for i in range(1, len(x_values)):
-        h = x_values[i] - x_values[i-1]
-        deriv = (f_values[i] - f_values[i-1]) / h
+        h = x_values[i] - x_values[i - 1]
+        deriv = (f_values[i] - f_values[i - 1]) / h
         derivatives.append(deriv)
     
     return derivatives
