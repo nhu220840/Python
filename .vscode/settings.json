@@ -56,5 +56,14 @@
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
-  "CodeGPT.apiKey": "CodeGPT Plus Beta"
+  "CodeGPT.apiKey": "CodeGPT Plus Beta",
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "window.zoomLevel": 0,
+  "terminal.intergrated.shell.osx": "zsh",
+  // "terminal.integrated.fontFamily": "MesloLGS NF",
+  "workbench.colorTheme": "Dracula Theme Soft",
+  "terminal.integrated.fontFamily": "'MesloLGM Nerd Font'",
+
 }

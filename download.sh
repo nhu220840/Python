@@ -48,6 +48,11 @@ echo "Installing Java..."
 sudo apt install openjdk-21-jdk-headless -y
 javac --version
 
+# Install GCC
+echo "Installing GCC..."
+sudo apt install build-essential -y
+gcc --version
+
 # Install Unikey
 echo "Installing Unikey..."
 echo | sudo add-apt-repository -y ppa:ubuntu-vn/ppa
@@ -56,11 +61,11 @@ sudo apt-get install ibus-unikey
 ibus restart
 
 # Install Anaconda 
-echo "Downloading Anaconda Installer..."
-wget https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
-bash ~/Anaconda3-2024.10-1-Linux-x86_64.sh
-source ~/.bashrc
-conda --version
+# echo "Downloading Anaconda Installer..."
+# wget https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
+# bash ~/Anaconda3-2024.10-1-Linux-x86_64.sh
+# source ~/.bashrc
+# conda --version
 # NOTICE: The version may change daily. If an error occurs, you can find the latest version to install.
 
 # Finalize
