@@ -69,13 +69,13 @@ preprocessor = ColumnTransformer(transformers=[
 
 reg = Pipeline(steps=[
     ("preprocessor", preprocessor),
-    ("model", RandomForestRegressor())
+    # ("model", RandomForestRegressor())
 ])
 
 # use this if u want to see the output of data transformation
-# result = reg.fit_transform(x_train)
+result = reg.fit_transform(x_train)
 
-reg.fit(x_train, y_train)
+# reg.fit(x_train, y_train)
 
 # LazyPredict not using Pipeline
 # reg = LazyRegressor(verbose=0,ignore_warnings=True, custom_metric=None)
@@ -91,22 +91,22 @@ reg.fit(x_train, y_train)
 # print(f"MSE: {mean_squared_error(y_test, y_predict)}")
 # print(f"R2: {r2_score(y_test, y_predict)}")
 
-params = {
-    "preprocessor__num_feature__imputer__strategy": ["mean", "median"],
-    "model__n_estimators": [100, 200, 300],
-    "model__criterion": ['absolute_error', 'poisson', 'squared_error', 'friedman_mse'],
-    "model__max_depth": [None, 2, 5]
-}
-grid_search = GridSearchCV(estimator=reg, param_grid=params, cv=5, scoring="r2", verbose=2, n_jobs=-1)
-# grid_search = RandomizedSearchCV(estimator=reg, param_distributions=params, n_iter=20, cv=5, scoring="r2", verbose=2, n_jobs=-1)
-grid_search.fit(x_train, y_train)
-y_predict = reg.predict(x_test)
-for i, j in zip(y_predict, y_test):
-    print(f"Predicted value: {i}. Actual value: {j}")
-
-print(grid_search.best_estimator_)
-print(grid_search.best_score_)
-print(grid_search.best_params_)
-print(f"MAE: {mean_absolute_error(y_test, y_predict)}")
-print(f"MSE: {mean_squared_error(y_test, y_predict)}")
-print(f"R2: {r2_score(y_test, y_predict)}")
+# params = {
+#     "preprocessor__num_feature__imputer__strategy": ["mean", "median"],
+#     "model__n_estimators": [100, 200, 300],
+#     "model__criterion": ['absolute_error', 'poisson', 'squared_error', 'friedman_mse'],
+#     "model__max_depth": [None, 2, 5]
+# }
+# grid_search = GridSearchCV(estimator=reg, param_grid=params, cv=5, scoring="r2", verbose=2, n_jobs=-1)
+# # grid_search = RandomizedSearchCV(estimator=reg, param_distributions=params, n_iter=20, cv=5, scoring="r2", verbose=2, n_jobs=-1)
+# grid_search.fit(x_train, y_train)
+# y_predict = reg.predict(x_test)
+# for i, j in zip(y_predict, y_test):
+#     print(f"Predicted value: {i}. Actual value: {j}")
+#
+# print(grid_search.best_estimator_)
+# print(grid_search.best_score_)
+# print(grid_search.best_params_)
+# print(f"MAE: {mean_absolute_error(y_test, y_predict)}")
+# print(f"MSE: {mean_squared_error(y_test, y_predict)}")
+# print(f"R2: {r2_score(y_test, y_predict)}")
